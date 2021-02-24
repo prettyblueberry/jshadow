@@ -1,0 +1,1206 @@
+// Fonts
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,700');
+// Variables
+@import 'variables';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+html,
+body {
+   position: relative;
+   /* Allows the footer to notice content height */
+   min-height: 100vh;
+   background-color: #cc0313;
+   font-family: 'Work Sans', sans-serif;
+}
+
+main {
+   // margin-bottom: 100px;
+   /* prevents footer overlap (footer height + 20px) */
+}
+
+.navbar-laravel {
+   background-color: #fff;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.btn-info {
+   color: white;
+}
+
+.btn-primary {
+   background-color: #96c93c;
+   border-color: #96c93c;
+
+   &:hover {
+      background-color: #a4ca61;
+      border-color: #a4ca61;
+   }
+}
+
+// Navigation
+nav.navbar {
+   background-color: #df1a41;
+
+   li.nav-item {
+      > a {
+         color: white !important;
+         font-weight: 700;
+         font-size: 16px;
+         border-bottom: 6px solid rgba(0, 0, 0, 0) !important;
+
+         &:hover {
+            border-bottom: 6px solid #7dc600 !important;
+         }
+      }
+   }
+}
+
+@media (min-width: 768px) {
+   .navbar-expand-md {
+      .navbar-nav {
+         .nav-link {
+            padding-right: 20px;
+            padding-left: 20px;
+         }
+      }
+   }
+}
+
+// Cards
+.card {
+   border: none;
+}
+
+.card-body {
+   background-color: rgb(111, 199, 192);
+   color: white;
+}
+
+.card-header {
+   background-color: inherit;
+   border-bottom: none;
+
+   h1 {
+      font-weight: 700;
+   }
+
+   p {
+      font-weight: 300 !important;
+   }
+}
+
+// Forms
+.form-control {
+   color: white !important;
+   background-color: rgba(0, 0, 0, 0) !important;
+   border: none !important;
+   border-bottom: 1px solid white !important;
+   border-radius: 0 !important;
+}
+
+.form-control:focus {
+   color: white !important;
+   background-color: rgba(0, 0, 0, 0) !important;
+   border-color: white !important;
+   box-shadow: none !important;
+}
+
+button[type=submit],
+input[type=submit],
+a.btn {
+   padding: 8px 20px !important;
+   font-size: 20px !important;
+   line-height: 30px !important;
+   font-weight: bold !important;
+   text-transform: uppercase !important;
+   border-radius: 0 !important;
+}
+
+// Datepicker
+.datepicker {
+   td {
+      padding: 10px !important;
+      font-size: 20px !important;
+
+      &:hover {
+         background: #e3342f !important;
+      }
+
+      &.active {
+         background-image: linear-gradient(to bottom, #e3342f, #e3342f) !important;
+      }
+   }
+}
+
+footer {
+   position: absolute;
+   width: 100%;
+   // bottom: 0;
+}
+
+// Adams CSS
+/* UI fix */
+
+.col-md-12 {
+   padding-right: 0;
+   padding-left: 0;
+}
+
+.row {
+   display: flex;
+   flex-wrap: wrap;
+   margin-right: 0;
+   margin-left: 0;
+}
+
+.card {
+   background: transparent;
+}
+
+.card-header:first-child {
+   border-radius: 0;
+}
+
+/* nav changes */
+
+.navbar-laravel {
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul.navbar-nav.mr-auto {
+   margin: 0 0 0 auto !important;
+}
+
+.social-icons {
+
+   a {
+      background-color: rgb(255, 255, 255);
+      border-radius: 22px;
+      color: rgb(223, 26, 65);
+      font-size: 19px;
+      width: 36px;
+      display: inline-block;
+      text-align: center;
+      padding: 3px;
+      margin-top: 10px;
+      margin-right: 15px;
+   }
+}
+
+.col-md-12 .text-right .social-icons {
+   padding: 0 1.5em;
+}
+
+.navbar-brand {
+   padding-top: .75rem !important;
+   padding-bottom: 0 !important;
+   font-size: 1rem !important;
+   box-shadow: inset 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+.navbar {
+   padding: 0.5rem 1.5em 0 1.5em;
+}
+
+div.social-icons > a:nth-child(3) {
+   margin-right: 30px;
+}
+
+/* .home  add this for when the heading is updated to text*/
+
+.home h1 {
+   font-size: 5vw;
+   font-family: "Cinnabar Brush", "Work Sans", sans-serif;
+   margin-bottom: 30px;
+   padding: 0 6%;
+}
+
+
+/* book a Job shadow */
+
+.btn-success {
+   color: #fff;
+   background-color: #7dc600;
+   border-color: #7dc600;
+}
+
+.btn-success:hover {
+   color: #fff;
+   background-color: #97c93c;
+   border-color: #97c93c;
+}
+
+.py-4 {
+   padding-top: 0 !important;
+}
+
+main .py-4 .home {
+   padding-top: 1.5rem !important;
+}
+
+/* profile */
+
+div.form-group.form-check {
+   background: #e5c613;
+   padding: 1.25rem;
+}
+
+input.form-check-input {
+   margin-left: 15px;
+}
+
+.form-check-label a {
+   color: #fff;
+}
+
+label.form-check-label {
+   margin-left: 40px;
+}
+
+input.form-control-file {
+}
+
+/* create-step-1 */
+
+.card-header {
+   padding-top: 1.5rem;
+}
+
+.create-step-1 .card-header {
+   //background-color: #6ec7c1;
+}
+
+.create-step-1 .form-control option {
+   background-color: #6ec7c1;
+}
+
+.create-step-1 .card-header h1 {
+   //background: url("https://jobshadow.co.za/images/blue_arrow.jpg");
+   //background-repeat: no-repeat;
+   //min-height: 45px;
+}
+
+/* create-step-2 */
+
+.create-step-2 .card-header {
+   //background-color: #e5c613;
+}
+
+.create-step-2 .card-body {
+   //background-color: #e5c613 !important;
+}
+
+.create-step-2 .form-control option {
+   background-color: #e5c613;
+}
+
+.create-step-2 .card-header h1 {
+   //background: url("https://jobshadow.co.za/images/yellow_arrow.jpg");
+   //background-repeat: no-repeat;
+
+   //min-height: 45px;
+}
+
+/* create-step-3 */
+
+.create-step-3 .card-header {
+   //background-color: #e01b42;
+}
+
+.create-step-3 .card-body {
+   // background-color: #e01b42 !important;
+}
+
+.create-step-3 .form-control option {
+   background-color: #e01b42;
+}
+
+.create-step-3 .card-header h1 {
+   //background: url("https://jobshadow.co.za/images/pink_arrow.jpg");
+   //background-repeat: no-repeat;
+   //min-height: 45px;
+}
+
+/* create-step-4 */
+
+.create-step-4 .card-header {
+   //background-color: #6ec7c1;
+}
+
+.create-step-4 .card-body {
+   background-color: #6ec7c1 !important;
+}
+
+.create-step-4 .form-control option {
+   background-color: #6ec7c1;
+}
+
+.create-step-4 .card-header h1 {
+   // background: url("https://jobshadow.co.za/images/blue_arrow.jpg");
+   // background-repeat: no-repeat;
+
+   //min-height: 45px;
+}
+
+/* create-step-5 */
+
+.create-step-5 .card-header {
+   //background-color: #97c93c;
+}
+
+.create-step-5 .card-body {
+   background-color: #97c93c !important;
+}
+
+.create-step-5 .card-header h1 {
+   // background: url("https://jobshadow.co.za/images/green_arrow.jpg");
+   // background-repeat: no-repeat;
+   //min-height: 45px;
+}
+
+.datepicker table tr td.disabled,
+.datepicker table tr td.disabled:hover {
+   color: #fff !important;
+}
+
+td.day .disabled:hover {
+   background-color: transparent !important;
+}
+
+td.day {
+   background-color: #e3342f !important;
+}
+
+td.day.disabled {
+   background-color: transparent !important;
+}
+
+.datepicker td.active {
+   background-image: linear-gradient(to bottom, #6ec7c1, #6ec7c1) !important;
+}
+
+th.next {
+   font-size: 2.5rem;
+}
+
+th.prev {
+   font-size: 2.5rem;
+}
+
+
+button {
+   background: #cc0313;
+   border: #cc0313;
+   color: #fff;
+}
+
+.datepicker .datepicker-switch:hover,
+.datepicker .prev:hover,
+.datepicker .next:hover,
+.datepicker tfoot tr th:hover {
+   background: #cc0313;
+}
+
+.datepicker td:hover {
+   background: transparent !important;
+}
+
+.datepicker table tr td.day:hover,
+.datepicker table tr td.day.focused {
+   background: #cc0313 !important;
+   cursor: pointer;
+}
+
+.datepicker table tr td span:hover,
+.datepicker table tr td span.focused {
+   background: #cc0313;
+}
+
+.datepicker table tr td.disabled:hover {
+   background: transparent !important;
+}
+
+/** Richard **/
+
+.content {
+   padding: 10px 0;
+
+   .card-header {
+      padding: 0.75rem 0 10px 0;
+
+      h1 {
+         margin-bottom: 0;
+      }
+   }
+
+}
+
+
+#app {
+
+   .card-body {
+      padding-left: 0;
+
+      .container {
+
+      }
+
+      input.form-check-input {
+         margin: 0 5px 0 10px;
+         position: relative;
+      }
+
+      label.form-check-label {
+
+         margin-left: 25px;
+
+      }
+   }
+
+   .create-step-1,
+   .create-step-2,
+   .create-step-3 {
+      .card-header h1 {
+         // padding-left: 60px;
+         //margin-left: 10px;
+         //fonts-size: 36px;
+         //line-height: 45px;
+      }
+   }
+
+   .register-form {
+      padding: 15px 0;
+   }
+
+   .form-container {
+
+      label {
+         display: none;
+      }
+
+      .form-control {
+         font-weight: 300;
+      }
+
+      .proceed {
+         padding: 25px 15px 5px;
+      }
+
+      p {
+         font-size: 15px;
+      }
+   }
+
+   hr {
+      color: transparent;
+
+      background: transparent;
+
+      border: transparent;
+
+      display: block;
+
+      float: left;
+
+      width: 100%;
+
+      padding: 0px 0;
+
+      margin: 10px 0;
+   }
+}
+
+.steps {
+   .container {
+      //padding-left: 80px;
+   }
+}
+
+.btn {
+   &.download, &.upload {
+      position: relative;
+      padding-left: 50px !important;
+   }
+
+   &.download {
+      &::before {
+         content: '';
+         background: url("https://jobshadow.co.za/images/green_arrow.jpg") 0 0 no-repeat #96c93c;
+         background-size: 33px;
+         position: absolute;
+         width: 33px;
+         height: 33px;
+         left: 8px;
+         top: 7px;
+      }
+   }
+   &.upload{
+      background-color: #e01b42;
+      border: none;
+      &::before{
+         content: '';
+         background: url("https://jobshadow.co.za/images/pink_arrow.jpg") 0 0 no-repeat #e01b42;
+         background-size: 33px;
+         position: absolute;
+         width: 33px;
+         height: 33px;
+         left: 8px;
+         top: 7px;
+         transform:scaleY(-1);
+      }
+      &:hover{
+         opacity: 0.9;
+      }
+   }
+}
+.yellow_bg{
+   color: #e01b42;
+   background-color: #f7d902;
+   padding: 20px 0;
+   margin: 0;
+}
+.green_bg{
+   color: #fff;
+   background-color: #97c93c;
+   padding: 20px 0;
+   margin: 0;
+}
+.btn-secondary{
+   background-color: #e01b42;
+   border: none;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+   color: white !important;
+   opacity: 0.75 !important;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+   color: white !important;
+   opacity: 0.75 !important;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+   color: white !important;
+   opacity: 0.75 !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white !important;
+   opacity: 0.75 !important;
+}
+
+
+/* --------pre-payment summary -------- */
+
+/*.card-body {
+   background-color: #97c93c !important;
+}
+
+change date btn{
+	border:2px solid #ffffff;
+}
+
+checkout sumbit btn{
+	color:#ffffff;
+	background-color: #cc0313;
+}
+
+ */
+
+/* --------	post-payment summary, -------- */
+
+/*
+
+upload  btn{
+	background-color: #cc0313;
+}
+
+*/
+
+
+/* --------	Submit indemnity --------	*/
+
+/*
+
+upload complete btn{
+	background-color: #cc0313;
+}
+
+*/
+
+
+/* --------	Application complete --------	*/
+
+
+/* --------	Application details --------	*/
+/* UI fix */
+
+.container {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+@media (max-width: 786px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.container {
+    max-width: 100% !important;
+}
+
+.card-header {
+    padding-left: 0px;
+}
+
+#app .card-body {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (max-width: 1200px) {
+    a.navbar-brand {
+        width: 50vw !important;
+        margin-top: 15px;
+    }
+}
+
+.navbar-light .navbar-toggler {
+    border-color: transparent;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("https://jobshadow.co.za/images/nav-btn.png");
+}
+
+.navbar-light .navbar-toggler-icon:hover {
+    background-image: url("https://jobshadow.co.za/images/nav-btn-hover.png");
+}
+
+/* NB please adjust line 4481 in the css to this:
+
+@media (min-width: 1200px) {
+  .navbar-expand-md {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+  }
+  
+  adjusting the code afterwards is creating some weird interactions
+  
+  */
+
+/* Login */
+.login .btn-primary {
+    background-color: #cc0313;
+    /* border-color: #cc0313; */
+}
+
+
+/* Register*/
+.register .btn-primary {
+    background-color: #cc0313;
+    border-color: #cc0313;
+}
+
+.create {
+    background-color: #6fc7c0;
+}
+
+.create .card-header h1 {
+    background: url("https://jobshadow.co.za/images/blue_arrow.jpg");
+    background-repeat: no-repeat;
+    padding-left: 55px;
+    min-height: 45px;
+}
+
+h1.tcs {
+    font-weight: 700;
+    padding-left: 55px;
+    min-height: 45px;
+    background: url(https://jobshadow.co.za/images/yellow_arrow.jpg);
+    background-repeat: no-repeat;
+}
+
+#app .card-body input.form-check-input {
+    margin: 0 0 0 45px;
+    position: relative;
+}
+
+#app .card-body label.form-check-label {
+    margin-left: 10px;
+    vertical-align: top;
+}
+
+a.tcs-view {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.create .btn-primary {
+    background-color: #cc0313;
+    border-color: #cc0313;
+}
+
+/* create-step-1 */
+
+.card-header {
+    padding-top: 1.5rem;
+}
+
+.create-step-1 .card-header {
+    background-color: #6ec7c1;
+}
+
+
+.create-step-1 .card-header h1 {
+    background: url("https://jobshadow.co.za/images/blue_arrow.jpg");
+    background-repeat: no-repeat;
+    padding-left: 55px;
+    min-height: 45px;
+}
+
+/* create-step-2 */
+
+.create-step-2 .card-header {
+    background-color: #e5c613;
+}
+
+.create-step-2 .card-body {
+    background-color: #e5c613 !important;
+}
+
+
+.create-step-2 .card-header h1 {
+    background: url("https://jobshadow.co.za/images/yellow_arrow.jpg");
+    background-repeat: no-repeat;
+    padding-left: 55px;
+    min-height: 45px;
+}
+
+/* create-step-3 */
+
+.create-step-3 .card-header {
+    background-color: #e01b42;
+}
+
+.create-step-3 .card-body {
+    background-color: #e01b42 !important;
+}
+
+.create-step-3 .form-control option {
+    background-color: #e01b42;
+}
+
+.create-step-3 .card-header h1 {
+    background: url("https://jobshadow.co.za/images/pink_arrow.jpg");
+    background-repeat: no-repeat;
+    padding-left: 55px;
+    min-height: 45px;
+}
+
+/* create-step-4 */
+
+.create-step-4 .card-header {
+    background-color: #6ec7c1;
+}
+
+.create-step-4 .card-body {
+    background-color: #6ec7c1 !important;
+}
+
+.create-step-4 .form-control option {
+    background-color: #6ec7c1;
+}
+
+.create-step-4 .card-header h1 {
+    background: url("https://jobshadow.co.za/images/blue_arrow.jpg");
+    background-repeat: no-repeat;
+    padding-left: 55px;
+    min-height: 45px;
+}
+
+/* create-step-5 */
+
+.create-step-5 .card-header {
+    background-color: #97c93c;
+}
+
+.create-step-5 .card-body {
+    background-color: #97c93c !important;
+}
+
+.create-step-5 .card-header h1 {
+    background: url("https://jobshadow.co.za/images/green_arrow.jpg");
+    background-repeat: no-repeat;
+    padding-left: 55px;
+    min-height: 45px;
+}
+
+.datepicker td,
+.datepicker th {
+    border-radius: 0px;
+}
+
+.datepicker table tr td span {
+    border-radius: 0px;
+}
+
+/* complete */
+
+.complete .card-header {
+    background-color: #e01b42;
+}
+
+.complete .card-header h1 {
+    background: url("https://jobshadow.co.za/images/pink_arrow.jpg");
+    background-repeat: no-repeat;
+    padding-left: 55px;
+    min-height: 45px;
+}
+
+.complete .card-body {
+    background-color: #97c93c !important;
+}
+
+
+.complete .btn-primary {
+    border-color: #ffffff;
+    position: relative;
+    bottom: 6px;
+    border-width: 2px;
+}
+
+.complete button {
+    background-color: #e01b42;
+    border-color: #e01b42;
+}
+
+@media (max-width: 768px) {
+    .complete .btn-primary {
+        bottom: 0px;
+    }
+}
+
+/* success-payment */
+
+.success-payment .card-header {
+    background-color: #e01b42;
+}
+
+.success-payment .card-header h1 {
+    background: url("https://jobshadow.co.za/images/pink_arrow.jpg");
+    background-repeat: no-repeat;
+    padding-left: 55px;
+    min-height: 45px;
+}
+
+.success-payment ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.success-payment li a {
+    color: #e01b42;
+}
+
+.success-payment li a:hover {
+    color: #cc0313;
+}
+
+/* create-indemnity */
+
+.create-indemnity .card-header {
+    background-color: #6ec7c1;
+}
+
+
+.create-indemnity .card-header h1 {
+    background: url("https://jobshadow.co.za/images/blue_arrow.jpg");
+    background-repeat: no-repeat;
+    padding-left: 55px;
+    min-height: 45px;
+}
+
+.create-indemnity .btn-primary {
+    background-color: #e01b42;
+    border-color: #e01b42;
+}
+
+
+/* home / thank you page */
+
+.home .btn-success {
+    background-color: #e01b42;
+    border-color: #e01b42;
+}
+
+.home .btn-secondary {
+    background-color: #97c93c;
+    border: 2px solid #ffffff;
+}
+
+/* application */
+
+.application .card-header {
+    background-color: #e01b42;
+}
+
+.application .card-header h1 {
+    background: url("https://jobshadow.co.za/images/pink_arrow.jpg");
+    background-repeat: no-repeat;
+    padding-left: 55px;
+    min-height: 45px;
+}
+
+.application .card-body {
+    background-color: #97c93c !important;
+}
+
+.application ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.application .btn-primary {
+    background-color: #e01b42;
+    border-color: #e01b42;
+}
+
+.pre-footer {
+    text-align: center;
+    color: #f7d902;
+    background: #cc0313;
+}
+
+.application .pre-footer .card-header {
+    background-color: transparent;
+}
+
+.application .pre-footer .card-header h1 {
+    background: none;
+    background-repeat: no-repeat;
+    padding-left: 0;
+    min-height: auto;
+}
+
+.application .btn.download::before {
+    content: "";
+    background: url(https://jobshadow.co.za/images/pink_arrow.jpg) 0 0 no-repeat #e01b42;
+    background-size: 33px;
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    left: 8px;
+    top: 7px;
+}
+.application p {
+    margin-bottom: 5px;
+}
+.application li a {
+    color: #cc0313;
+}
+.application li a:hover {
+    color: #cc0313;
+}
+
+/* footer */
+
+.footer .container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.create {
+    padding-bottom: 25px;
+}
+
+.home img {
+    width: 100% !important;
+    height: auto !important;
+}
+
+#app>main.home>div>div>div>div>div>div>a.btn.btn-success {
+    color: #fff;
+    background-color: #7dc600;
+    border-color: #7dc600;
+}
+
+
+@media (max-width: 594px) {
+    a.btn.btn-danger {
+        font-size: 1.15em !important;
+    }
+
+    input.btn.btn-primary {
+        font-size: 1.15em !important;
+    }
+
+}
+
+.bg-dark.sidebar a {
+   color: white;
+}
+
+th, td {
+   vertical-align: top;
+}
+
+/* ADMIN STYLES */
+body {
+    font-size: .875rem;
+}
+
+.feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    /* Behind the navbar */
+    padding: 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 48px;
+    /* Height of navbar */
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+}
+
+.sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #999;
+}
+
+.sidebar .nav-link.active {
+    color: #007bff;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+    color: inherit;
+}
+
+.sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+/*
+ * Navbar
+ */
+
+.navbar-brand {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.navbar .form-control {
+    padding: .75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+}
+
+.form-control-dark {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+/*
+ * Utilities
+ */
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.dropdown {
+   position: relative;
+   display: inline-block;
+}
+
+.dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f1f1f1;
+   min-width: 160px;
+   overflow: auto;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+}
+
+.dropdown-content a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+}
+
+.dropdown a.dropped:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.is-admin {
+   background-color: #f8f9fa;
+
+   .card {
+      background-color: #343a40;
+      box-shadow: 1px 2px 3px #888888;
+      .card-header {
+         padding-left: 20px;
+         color: white;
+         font-size: 25px;
+      }
+   }
+
+   a.btn,
+   input.btn,
+   button.btn {
+      padding: 4px 10px !important;
+      font-size: 14px !important;
+      line-height: 30px !important;
+      font-weight: normal !important;
+      text-transform: uppercase !important;
+      border-radius: 10px !important;
+   }
+}
+
+
