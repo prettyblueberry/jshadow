@@ -34,7 +34,9 @@ class Job extends Model
         'arrival_time',
         'collection_time',
         'max_applicants',
-        'amount'
+        'amount',
+        'period',
+        'created_at'
     ];
 
     /**

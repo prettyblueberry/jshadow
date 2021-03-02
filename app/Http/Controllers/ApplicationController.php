@@ -191,6 +191,20 @@ class ApplicationController extends Controller
 
             $careerJobs = $career->jobs->toArray();
 
+            foreach($careerJobs as $job){
+                $temp_availability = array();
+                foreach($job['availability'] as $availability){
+                    if(!$availability) continue;
+                    $arrival_time = '00';
+                    if($job['arrival_time']) $arrival_time = $job['arrival_time'];
+                    $from = Carbon::createFromFormat('m/d/Y H:s:i', $availability.' '.substr($arrival_time, 0, 2).':00:00');
+                    $to = Carbon::createFromFormat('Y-m-d H:s:i', now());
+                    $diff_hours = $to->diffInHours($from);
+                    if($diff_hours > $job['period']) array_push($temp_availability, $availability);
+                }
+                $job['availability'] = $temp_availability;
+            }
+
             foreach($careerJobs as $jobs) {
                 foreach ($jobs['availability'] as $key => $availability) {
                     if(!$availability) {

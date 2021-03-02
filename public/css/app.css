@@ -1627,12 +1627,18 @@ pre code {
 .table td {
   padding: 0.75rem;
   vertical-align: top;
+}
+.table tr {
   border-top: 1px solid #dee2e6;
+}
+
+.td_period {
+  display: flex;
+  justify-content: space-between;
 }
 
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
 }
 
 .table tbody + tbody {
@@ -1978,6 +1984,16 @@ pre code {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.period-edit-form {
+  display: flex;
+}
+.period-edit {
+  width: 100px !important;
+  margin: 0 10px;
+}
+.period-edit_id {
+  display: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -11222,9 +11238,9 @@ upload complete btn{
     flex-flow: row nowrap;
     justify-content: flex-start;
   }
-  
+
   adjusting the code afterwards is creating some weird interactions
-  
+
   */
 
 /* Login */

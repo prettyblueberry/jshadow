@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/jobs/export', 'JobController@export');
 Route::resource('jobs', 'JobController');
+Route::post('/job/period', 'JobController@period');
 Route::resource('sectors', 'SectorController');
 
 Route::any('/application/delete/{id}', 'ApplicationController@destroy');

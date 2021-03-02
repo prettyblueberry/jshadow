@@ -69,6 +69,7 @@
                             <tr>
                                 <th scope="col">ID</th>
                                 <th scope="col">Company</th>
+                                <th scope="col">Period</th>
                                 <th scope="col">Career</th>
                                 <th scope="col">Sector</th>
                                 <th scope="col">Dates</th>
@@ -82,6 +83,28 @@
                             <tr>
                                 <th scope="row">{{ $job->id }}</th>
                                 <td width="15%">{{ $job->company }}</td>
+                                <td width="15%">
+                                    @if($job->period != '')
+                                        <div id="period_{{ $job->id }}" style="display:flex">
+                                            <div style='margin-right:20px;'>{{ $job->period }} hours </div>
+                                            <button class='btn btn-info fas fa-edit m-8' onclick="changePeriod{{ $job->id }}()" />
+                                        </div>
+                                        <div id="period_{{ $job->id }}_edit" style="display:none">
+                                            {{ Form::open(['action' => ['JobController@period'], 'class' => 'period-edit-form']) }}
+                                                {{ Form::number('period', $job->period, ['class' => 'form-control period-edit', 'placeholder' => '']) }}
+                                                {{ Form::text('id', $job->id, ['class' => 'period-edit_id', 'placeholder' => '']) }}
+                                                {{ Form::submit('Save', ['class' => 'btn btn-primary']) }}
+                                            {{ Form::close() }}
+                                        </div>
+                                        <script>
+                                            function changePeriod{{ $job->id }}(){
+                                                document.getElementById('period_{{ $job->id }}').style.display = 'none'
+                                                document.getElementById('period_{{ $job->id }}_edit').style.display = 'flex'
+
+                                            }
+                                        </script>
+                                     @endif
+                                </td>
                                 <td width="10%">{{ ($job->career) ? ucfirst($job->career->name) : '' }}</td>
                                 <td width="10%">{{ implode(', ', array_column($job->sectors->toArray(), 'name')) }}</td>
                                 <td class="dates">{{ $job->dates }}</td>

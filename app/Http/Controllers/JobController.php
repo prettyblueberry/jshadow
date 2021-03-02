@@ -33,7 +33,7 @@ class JobController extends Controller
      */
     public function index()
     {
-        $jobs = Job::select('id', 'career_id', 'company', 'description', 'location', 'location_id', 'availability')->get();
+        $jobs = Job::select('id', 'career_id', 'company', 'description', 'location', 'location_id', 'availability', 'period', 'created_at')->get();
 
         foreach($jobs as $job) {
             $allPeriodDates = [];
@@ -50,9 +50,30 @@ class JobController extends Controller
             $job->dates = implode(', ', $allPeriodDates);
         }
 
+        $temp_jobs = array();
+        foreach($jobs as $job) {
+            $exist_company = false;
+            $idx = 0;
+            foreach($temp_jobs as $temp_job) {
+                if($exist_company && $temp_job->company != '') break;
+                if($temp_job->company == $job->company) $exist_company = true;
+                $idx++;
+            }
+            if($exist_company){
+                $job->company = '';
+                $job->period = '';
+                $data = '';
+                array_splice($temp_jobs, $idx, 0, $data);
+                $temp_jobs[$idx] = $job;
+            }
+            else {
+                array_push($temp_jobs, $job);
+            }
+        }
+
         return view('order.index',
             [
-                'jobs' => $jobs
+                'jobs' => $temp_jobs
             ]
         );
     }
@@ -298,5 +319,13 @@ class JobController extends Controller
     public function export(Request $request)
     {
         return Excel::download(new JobsExport($request->all()), 'jobs.xlsx');
+    }
+
+    public function period(Request $request)
+    {
+        $input = $request->all();
+        $job = Job::find($input['id']);
+        $res = Job::where('company', $job->company)->update(['period' => $input['period']]);
+        return redirect()->action('JobController@index')->with('status', 'Successfully updated');
     }
 }
