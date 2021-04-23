@@ -42,7 +42,7 @@
                                                     {{ ucfirst($career->name) }}
                                             </option>
                                         @else
-                                            <option value="{{ $career->id }}" disabled data-test="third">{{ ucfirst($career->name) }}</option>
+                                            <option value="{{ $career->id }}" data-test="third">{{ ucfirst($career->name) }}</option>
                                         @endif
 
                                     @endforeach
