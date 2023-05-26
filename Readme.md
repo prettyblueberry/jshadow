@@ -2,13 +2,15 @@
 
 Job Shadow is a website that provides information about different jobs and careers in South Africa, as well as advice on job searching and career development. It was built with Laravel.
 
+Live: [https://jobshadow.co.za/](https://jobshadow.co.za/)
+
 
 ![screen.png](screen.png)
 
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/jshadow.git`
+1. Clone the repository: `git clone https://github.com/prettyblueberry/jshadow.git`
 2. Navigate into the project directory: `cd jshadow`
 3. Install composer dependencies: `composer install`
 4. Copy .env.example file to .env file: `cp .env.example .env`
